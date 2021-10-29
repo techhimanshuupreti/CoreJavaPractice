@@ -17,12 +17,12 @@ public class MainClass {
 		List<Object> returnList = new ArrayList<Object>();
 		returnList.add("Jai");
 		returnList.add("Himanshu");
-		returnList.add("Upreti");
+		returnList.add("16");
 		returnList.add("Jai");
 		returnList.add("OM");
-		returnList.add("Jai");
+		returnList.add("20");
 		
-		System.out.println("List= "+arrRelated.removeDuplicate(returnList).toString());
+		System.out.println("List= "+arrRelated.removeDuplicate(returnList));
 		
 		
 	}
