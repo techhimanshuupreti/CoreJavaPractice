@@ -22,7 +22,7 @@ public class MainClass {
 		returnList.add("OM");
 		returnList.add("20");
 		
-		System.out.println("List= "+arrRelated.removeDuplicate(returnList));
+		System.out.println("List= "+arrRelated.removeDuplicateByCollectionMetheds(returnList));
 		
 		
 	}

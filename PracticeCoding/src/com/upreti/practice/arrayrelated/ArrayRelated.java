@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class ArrayRelated {
 
-	public List<Object> removeDuplicate(List<Object> arrayList) {
+	public List<Object> removeDuplicateByCollectionMetheds(List<Object> arrayList) {
 		List<Object> returnList = new ArrayList<Object>();
 		Set<Object> removeDuplicateString = new HashSet<Object>(arrayList);
 		returnList.add(removeDuplicateString);
