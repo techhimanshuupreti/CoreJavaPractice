@@ -5,7 +5,7 @@ public class MainClass {
 		System.out.println("hello");
 		
 		StringRelatedMethods stRelatedMethod = new StringRelatedMethods();
-		String outside = stRelatedMethod.getIndexOfDuplicateCharacterInGivenString("I am Himanshu");
-		System.out.println("outside = "+outside);
+		String outsides = stRelatedMethod.getIndexOfDuplicateCharacterInGivenString("I am Himanshu");
+		System.out.println("outside = "+outsides);
 	}
 }
