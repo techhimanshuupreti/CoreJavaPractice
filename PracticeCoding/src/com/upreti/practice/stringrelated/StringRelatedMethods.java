@@ -123,22 +123,6 @@ public class StringRelatedMethods {
 			   mappedValues.put(String.valueOf(ch[index]), 1);
 		   }
 	   }
-	   
-		 //Obtaining set of keys
-		   Set<String> keys = mappedValues.keySet();
-		
-		   /* Display count of chars if it is
-			* greater than 1. All duplicate chars would be 
-			* having value greater than 1.
-			*/
-		   int count=0;
-		   for(String chs:keys){
-			   count++;
-			 if(mappedValues.get(chs) > 1){
-				 int incrVal = count;
-			   returnStr = returnStr+ chs+" "+incrVal+",";
-			 }
-		   }
 	   return returnStr.replaceFirst(" ", "");
    }
 }
