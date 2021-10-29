@@ -3,3 +3,7 @@
 .project
 .settings
 bin/
+bin/MainClass.class
+bin/com/upreti/practice/stringrelated/StringRelatedMethods.class
+../../../../bin/MainClass.class
+../../../../bin/com/upreti/practice/stringrelated/StringRelatedMethods.class
