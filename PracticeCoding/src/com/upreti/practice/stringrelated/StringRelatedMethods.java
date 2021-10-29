@@ -103,4 +103,42 @@ public class StringRelatedMethods {
 	   }
 	   return revserString;
    }
+   
+   public String getIndexOfDuplicateCharacterInGivenString(String str) {
+	   System.out.println("String Input: " + str);
+	   String localStr = (str.trim()).replace(" ", "");
+	   char[] ch = localStr.toCharArray();
+	   String returnStr ="";
+	   HashMap<String, Integer> mappedValues = new HashMap<String, Integer>();
+	   for (int index = 0; index < ch.length; index++) {
+		   if (mappedValues.containsKey(String.valueOf(ch[index]))) {
+			   for (int indexj = index; indexj < ch.length; indexj++) {
+				   if (ch[index] == ch[indexj]) {
+					   String keyName = String.valueOf(ch[index]);
+					   int val = mappedValues.get(keyName)+1;
+					   mappedValues.put(String.valueOf(ch[index]), val);
+				   }
+			   }
+		   } else {
+			   mappedValues.put(String.valueOf(ch[index]), 1);
+		   }
+	   }
+	   
+		 //Obtaining set of keys
+		   Set<String> keys = mappedValues.keySet();
+		
+		   /* Display count of chars if it is
+			* greater than 1. All duplicate chars would be 
+			* having value greater than 1.
+			*/
+		   int count=0;
+		   for(String chs:keys){
+			   count++;
+			 if(mappedValues.get(chs) > 1){
+				 int incrVal = count;
+			   returnStr = returnStr+ chs+" "+incrVal+",";
+			 }
+		   }
+	   return returnStr.replaceFirst(" ", "");
+   }
 }
