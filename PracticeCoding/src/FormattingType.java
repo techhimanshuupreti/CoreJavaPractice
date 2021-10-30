@@ -4,5 +4,6 @@ public class FormattingType {
 	
 	public String currency() {
 		double payment = 12324.134;
+		return null;
 	}
 }
