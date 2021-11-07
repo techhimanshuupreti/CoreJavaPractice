@@ -11,5 +11,21 @@ public class MainClass {
 
 		DateRelated dateRelated = new DateRelated();
 		System.out.println("outside = "+dateRelated.findWeekDayName(9, 21, 2021));
+		
+		
+		StringRelatedMethods strRelatedMethods = new StringRelatedMethods();
+//		String A="hello";
+//      String B= "java";
+		String A = "java";
+		String B = "hello";
+		String outputMethod = strRelatedMethods.methodName(A, B);
+		System.out.println("Output: " + outputMethod);
+
+		String sortDictioary = strRelatedMethods.subStringWithThreeCharAndSorWithDictionary("I am himanshu", 3);
+		System.out.println("Output: " + sortDictioary);
+		
+		CurrencyRelated cuuRe = new CurrencyRelated();
+		System.out.println("Output: " + cuuRe.getCurrencyFormatWithSysmbol(12400.00d, Locale.CHINA));
+
 	}
 }
