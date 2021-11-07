@@ -143,5 +143,48 @@ public class StringRelatedMethods {
 	   return returnStr.replaceFirst(" ", "");
    }
    
- 
+ 	public String methodName(String A, String B) {
+		int strLengthSum = A.length() + B.length();
+		char[] aCh = A.toCharArray();
+		char[] bCh = B.toCharArray();
+
+		String decissionResult, combineString;
+
+		if ((A.length() > B.length())) {
+			if (aCh[0] > bCh[0]) {
+				decissionResult = "Yes";
+			} else {
+				decissionResult = "No";
+			}
+		} else {
+			if (aCh[0] > bCh[0]) {
+				decissionResult = "Yes";
+			} else {
+				decissionResult = "No";
+			}
+		}
+
+		String oA = A.substring(0, 1).toUpperCase();
+		A = oA + A.substring(1, A.length());
+		String oB = B.substring(0, 1).toUpperCase();
+		B = oB + B.substring(1, B.length());
+		combineString = A + " " + B;
+		return String.valueOf(strLengthSum) + " | " + decissionResult + " | " + combineString;
+	}
+	
+	public String subStringWithThreeCharAndSorWithDictionary(String str, int subStringlength) {
+		String testingString =  str.trim().replace(" ", "").toLowerCase();
+		HashSet<String> uniqueElements = new HashSet<String>(); 
+		for(int i=0; i<testingString.length();i++) {
+			if(i<=testingString.length()-subStringlength) {
+				uniqueElements.add(testingString.substring(i,i+subStringlength));	
+			}
+		}
+		
+		ArrayList<String> flower_array = new ArrayList<String>(uniqueElements);
+		Collections.sort(flower_array);
+		String smallest =flower_array.get(0);
+		String largest =flower_array.get(flower_array.size()-1); 
+		return "[ "+ smallest +" , "+ largest + " ]";
+	}
 }
